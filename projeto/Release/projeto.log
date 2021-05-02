@@ -1,31 +1,31 @@
 ﻿  main.cpp
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(248,88): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(248,72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(261,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(261,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(273,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Desktop\projeto\projeto\main.cpp(273,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(248,88): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(248,72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(261,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(261,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(273,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(273,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
   Gerando código
-  2 of 1783 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  1 of 1783 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    46 functions had inline decision re-evaluated but remain unchanged
+    23 functions had inline decision re-evaluated but remain unchanged
   Finalizada a geração de código
-glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' não foi encontrado 'glew32s.lib(glew.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\vc120.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(context.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(init.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(input.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(monitor.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(vulkan.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(window.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_init.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_joystick.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_monitor.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_time.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_thread.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_thread.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_window.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(wgl_context.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(egl_context.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-glfw3.lib(osmesa_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(osmesa_context.obj)' ou no 'C:\Users\Neto!\Desktop\projeto\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
-  projeto.vcxproj -> C:\Users\Neto!\Desktop\projeto\Release\projeto.exe
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' não foi encontrado 'glew32s.lib(glew.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\vc120.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(context.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(init.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(input.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(monitor.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(vulkan.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(window.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_init.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_joystick.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_monitor.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_time.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_thread.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_thread.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(win32_window.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(wgl_context.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(egl_context.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+glfw3.lib(osmesa_context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(osmesa_context.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
+  projeto.vcxproj -> C:\Users\Neto!\Documents\GitHub\Project_UC\Release\projeto.exe

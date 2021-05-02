@@ -164,21 +164,21 @@ int main(int, char**)
     int my_image_width = 100;
     int my_image_height = 100;
     GLuint my_image_texture = 0;
-    bool ret = LoadTextureFromFile("C:\\Users\\Neto!\\Desktop\\CS-GO-.jpg", &my_image_texture, &my_image_width, &my_image_height);
+    bool ret = LoadTextureFromFile("1.jpg", &my_image_texture, &my_image_width, &my_image_height);
     
     IM_ASSERT(ret);
     //apex
     int my_image_width1 = 100;
     int my_image_height1 = 100;
     GLuint my_image_texture1 = 0;
-    bool ret1 = LoadTextureFromFile("C:\\Users\\Neto!\\Desktop\\Screenshot_2.png", &my_image_texture1, &my_image_width1, &my_image_height1);
+    bool ret1 = LoadTextureFromFile("2.png", &my_image_texture1, &my_image_width1, &my_image_height1);
     IM_ASSERT(ret1);
 
     //knives
     int my_image_width2 = 100;
     int my_image_height2 = 100;
     GLuint my_image_texture2 = 0;
-    bool ret2 = LoadTextureFromFile("C:\\Users\\Neto!\\Desktop\\42689b2c5a281add1352e2eb1c3e0f66.jpg", &my_image_texture2, &my_image_width2, &my_image_height2);
+    bool ret2 = LoadTextureFromFile("3.jpg", &my_image_texture2, &my_image_width2, &my_image_height2);
     IM_ASSERT(ret2);
 
 
