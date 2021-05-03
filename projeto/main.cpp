@@ -1,5 +1,7 @@
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include "HTTPRequest.hpp"
 # define  STB_IMAGE_IMPLEMENTATION 
+#include "VMProtectSDK.h"
 #include  "stb_image.h " 
 #include <iostream>
 #include <Windows.h>
@@ -12,61 +14,194 @@
 #include "Helpers.h"
 #include "imgui_builder.h"
 #include <Lmcons.h>
-std::string retor;
+#include <shellapi.h>
+#include <strsafe.h>
+#include <urlmon.h>
+#include "console.h"
+#pragma comment(lib, "urlmon.lib")
+#pragma comment(lib,"wininet.lib")
+#include <tchar.h>
 
-void knives( std::string user, std::string livre)
+
+
+void dowimg()
 {
+    VMProtectBeginUltra("cdkwad");
 
-    std::string livres = "livre";
+    LPCTSTR Url1 = _T(VMProtectDecryptStringA("https://enumc.risesafare.com/api/1.jpg")), File1 = _T(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\1.jpg"));
+    LPCTSTR Url2 = _T(VMProtectDecryptStringA("https://enumc.risesafare.com/api/2.png")), File2 = _T(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\2.png"));
+    LPCTSTR Url3 = _T(VMProtectDecryptStringA("https://enumc.risesafare.com/api/3.jpg")), File3 = _T(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\3.jpg"));
+    LPCTSTR Url4 = _T(VMProtectDecryptStringA("https://enumc.risesafare.com/api/4.png")), File4 = _T(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\4.png"));
+
+    URLDownloadToFile(0, Url1, File1, 0, 0);
+    URLDownloadToFile(0, Url2, File2, 0, 0);
+    URLDownloadToFile(0, Url3, File3, 0, 0);
+    URLDownloadToFile(0, Url4, File4, 0, 0);
+
+
+    VMProtectEnd();
+}
+
+std::string retor;
+bool por = false;
+bool logF = true;
+void knives( std::string user)
+{
+    VMProtectBeginUltra("cdkwad");
 
     char username[UNLEN + 1];
     DWORD size = UNLEN + 1;
     GetComputerName((char*)username, &size);
     std::string retornou;
     //std::string struser(username);
-
-
     //std::string hd_serial = hw_info::get_hd_serial_num();
     try
     {
-        http::Request request("https://enumc.risesafare.com/api/pppue.php?user=" + user +  "&hdi=" + username);
-        const http::Response response = request.send("GET");
-
+        http::Request request("https://enumc.risesafare.com/api/pppue.php?user=" + user + VMProtectDecryptStringA("&hdi=") + username);
+        const http::Response response = request.send(VMProtectDecryptStringA("GET"));
         retornou = std::string(response.body.begin(), response.body.end());
-
         if (retornou.find("OK") != -1)
         {
-            if (retornou.find(username) != -1 || retornou.find(livres) != -1)
+            if (retornou.find(username) != -1)
             {
-               
-                retor = retornou;
-               std::cout <<  retor << "\n";
+                por = true;
+                logF = false;
             }
             else {
 
             }
-
         }
-        else if (retornou.find("Acabou") != -1)
+        else if (retornou.find(VMProtectDecryptStringA("Acabou")) != -1)
         {
-
-            std::cout << "\nyour VIP is over\n";
-            Sleep(7000);
+            
+            retor = VMProtectDecryptStringA("your VIP is over");
+            
         }
         else
         {
-
-            std::cout << "\nNo key access!!\n";
-            Sleep(7000);
+            retor = VMProtectDecryptStringA("No key access!!");
         }
-
-    }
+       
+     }
     catch (const std::exception& e)
     {
-        std::cerr << "Request failed, error: " << e.what() << '\n';
+        std::cerr << VMProtectDecryptStringA("Request failed, error: ") << e.what() << '\n';
+    }
+    VMProtectEnd();
+}
+
+////auto_deleta
+#define SELF_REMOVE_STRING  TEXT("cmd.exe /C ping 1.1.1.1 -n 1 -w 3000 > Nul & Del /f /q \"%s\"")
+void DelMe()
+{
+    TCHAR szModuleName[MAX_PATH];
+    TCHAR szCmd[2 * MAX_PATH];
+    STARTUPINFO si = { 0 };
+    PROCESS_INFORMATION pi = { 0 };
+    GetModuleFileName(NULL, szModuleName, MAX_PATH);
+    StringCbPrintf(szCmd, 2 * MAX_PATH, SELF_REMOVE_STRING, szModuleName);
+    CreateProcess(NULL, szCmd, NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
+    CloseHandle(pi.hThread);
+    CloseHandle(pi.hProcess);
+}
+
+/// atualização
+void version() {
+   
+    VMProtectBeginUltra("lkjsefg");
+    HWND consoleWindow = GetConsoleWindow();
+    SetWindowPos(consoleWindow, 0, 400, 150, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+
+    char remVer[4];
+    char myVer[4] = "1.0";//versão
+    SetConsoleTitle(VMProtectDecryptStringA("UnissexCheat"));
+    system(VMProtectDecryptStringA("MODE CON COLS=80 LINES=20"));
+    g_pCon->SetConsoleColor(green, black);
+    std::cout << VMProtectDecryptStringA("\nChecking for newer versions...\n");
+    Sleep(1000);
+    system(VMProtectDecryptStringA("cls"));
+
+
+    http::Request reques("https://enumc.risesafare.com/api/vers.txt");
+    const http::Response respons = reques.send(VMProtectDecryptStringA("GET"));
+    auto retorno = std::string(respons.body.begin(), respons.body.end());
+
+    #define MAX_STR_SIZE	20
+    #define MIN_STR_SIZE	5
+
+    const char* CharacterSet = "abcdefghijklmnopqrstuvwxyz";
+    const char* Extension = ".exe";
+
+
+
+    char* novastr;
+    register int i;
+    int str_len;
+
+    srand(time(0));
+
+    str_len = (rand() % MAX_STR_SIZE);
+
+    str_len += (str_len < MIN_STR_SIZE) ? MIN_STR_SIZE : 0;
+
+    if (retorno == myVer)
+    {
+        
+        std::cout << VMProtectDecryptStringA("\nYou already have the newest version\n");
+        Sleep(4000);
+        system(VMProtectDecryptStringA("cls"));
+
+    }
+    else
+    {
+        g_pCon->SetConsoleColor(red, black);
+        std::cout << VMProtectDecryptStringA("\nnew update, Updating...\n");
+        int count = 0;
+        g_pCon->SetConsoleColor(green, black);
+        std::cout << std::endl << VMProtectDecryptStringA("Loading...");
+        for (count; count < 20; ++count) {
+            g_pCon->SetConsoleColor(gray, black);
+            std::cout << "|";
+            fflush(stdout);
+            Sleep(1);
+            Sleep(200);
+        }
+        system("cls");
+        system("color 4");
+        g_pCon->SetConsoleColor(green, black);
+        std::cout << VMProtectDecryptStringA("\nupdated successfully...\n");
+        Sleep(4000);
+        system("cls");
+        novastr = (char*)malloc((str_len + 1) * sizeof(char));
+        if (!novastr) {
+            g_pCon->SetConsoleColor(red, black);
+            std::cout << VMProtectDecryptStringA("[*] Erro ao alocar memoria.\n");
+            exit(EXIT_FAILURE);
+        }
+        for (i = 0; i < str_len; i++) {
+            novastr[i] = CharacterSet[rand() % strlen(CharacterSet)];
+            novastr[i + 1] = 0x0;
+        }
+
+        strcat(novastr, ".exe");
+
+
+        http::Request reques(VMProtectDecryptStringA("https://enumc.risesafare.com/api/textura.txt"));
+        const http::Response respons = reques.send(VMProtectDecryptStringA("GET"));
+        auto retorno = std::string(respons.body.begin(), respons.body.end());
+        LPCSTR lpcstr = retorno.c_str();
+        URLDownloadToFile(0, lpcstr, novastr, 0, 0);
+
+
+        DelMe();
+
+        ExitProcess(0);
+
     }
 
+    VMProtectEnd();
 }
+
 void ToggleButton(const char* str_id, bool* v)
 {
     ImVec2 p = ImGui::GetCursorScreenPos();
@@ -89,18 +224,21 @@ void ToggleButton(const char* str_id, bool* v)
 
 static void glfw_error_callback(int error, const char* description)
 {
-    fprintf(stderr, "Glfw Error %d: %s\n", error, description);
+    fprintf(stderr, VMProtectDecryptStringA("Glfw Error %d: %s\n"), error, description);
 }
 
 
 int main(int, char**)
 {
-    
+    dowimg();
+    VMProtectBeginUltra("uhfuesgf");
+    version();
+    ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
         return 1;
 
-    const char* glsl_version = "#version 130";
+    const char* glsl_version = VMProtectDecryptStringA("#version 130");
 
 
     GLFWmonitor* Monitor = glfwGetPrimaryMonitor();
@@ -108,8 +246,6 @@ int main(int, char**)
     {
         return 0;
     }
-
-    
    
    int Width = glfwGetVideoMode(Monitor)->width;
    int Height = glfwGetVideoMode(Monitor)->height;
@@ -118,8 +254,6 @@ int main(int, char**)
    glfwWindowHint(GLFW_MAXIMIZED, true);
    glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, true);
 
-  
-  
     // Creaar windows graphics
     GLFWwindow* Window = glfwCreateWindow(Width, Height, "", NULL, NULL);
 
@@ -136,7 +270,7 @@ int main(int, char**)
 
     if (glewInit() != GLEW_OK)
     {
-        fprintf(stderr, "erro OpenGL loader!\n");
+        fprintf(stderr, VMProtectDecryptStringA("erro OpenGL loader!\n"));
         return 1;
     }
 
@@ -164,32 +298,39 @@ int main(int, char**)
     int my_image_width = 100;
     int my_image_height = 100;
     GLuint my_image_texture = 0;
-    bool ret = LoadTextureFromFile("1.jpg", &my_image_texture, &my_image_width, &my_image_height);
+    bool ret = LoadTextureFromFile(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\1.jpg"), &my_image_texture, &my_image_width, &my_image_height);
     
     IM_ASSERT(ret);
     //apex
     int my_image_width1 = 100;
     int my_image_height1 = 100;
     GLuint my_image_texture1 = 0;
-    bool ret1 = LoadTextureFromFile("2.png", &my_image_texture1, &my_image_width1, &my_image_height1);
+    bool ret1 = LoadTextureFromFile(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\2.png"), &my_image_texture1, &my_image_width1, &my_image_height1);
     IM_ASSERT(ret1);
 
     //knives
     int my_image_width2 = 100;
     int my_image_height2 = 100;
     GLuint my_image_texture2 = 0;
-    bool ret2 = LoadTextureFromFile("3.jpg", &my_image_texture2, &my_image_width2, &my_image_height2);
+    bool ret2 = LoadTextureFromFile(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\3.jpg"), &my_image_texture2, &my_image_width2, &my_image_height2);
     IM_ASSERT(ret2);
 
 
+    //knives
+    int my_image_width3 = 100;
+    int my_image_height3 = 100;
+    GLuint my_image_texture3 = 0;
+    bool ret3 = LoadTextureFromFile(VMProtectDecryptStringA("C:\\ProgramData\\Microsoft\\4.png"), &my_image_texture3, &my_image_width3, &my_image_height3);
+    IM_ASSERT(ret3);
+
+
     bool MenuVisible = true;
-    bool por = false;
+    
     
     ///main loop
     while (!glfwWindowShouldClose(Window))
     {
        
-        
         glfwPollEvents();
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_NewFrame();
@@ -213,43 +354,50 @@ int main(int, char**)
         if (MenuVisible) {
             //draw here
             
+            if (logF == true) {
+                ImGui::SetNextWindowPos({ 500.f,250.f });
+                ImGui::SetNextWindowSize({ 370.f,246.f });
+                ImGui::Begin(VMProtectDecryptStringA("               UnissexCheat"));
 
-            ImGui::SetNextWindowSize({ 370.f,246.f });
-            ImGui::Begin("               UnissexCheat");
-            ImGui::SetCursorPos({ 37.f,90.f });
-            ImGui::Text("LOGIN");
-            ImGui::SetCursorPos({ 84.f,107.f });
-            ImGui::InputText("", buffer, 255);
-            ImGui::SetCursorPos({ 84.f,134.f });
-            if (ImGui::Button("LOG IN", { 84.f,19.f }))
-            {
-                std::string key_string(buffer);
-                knives(key_string,"livre");
-                por = true;
+                const char* cstr = retor.c_str();
+                ImGui::SetCursorPos({ 37.f,90.f });
+                ImGui::Text(cstr);
+                
+                ImGui::SetCursorPos({ 37.f,90.f });
+                ImGui::Text(VMProtectDecryptStringA("LOGIN"));
+                ImGui::SetCursorPos({ 84.f,107.f });
+                ImGui::InputText(VMProtectDecryptStringA(""), buffer, 255);
+                ImGui::SetCursorPos({ 84.f,134.f });
+                if (ImGui::Button(VMProtectDecryptStringA("LOG IN"), { 84.f,19.f }))
+                {
+                    std::string key_string(buffer);
+                    knives(key_string);
+
+                }
+                ImGui::SetCursorPos({ 174.f,134.f });
+                if (ImGui::Button(VMProtectDecryptStringA("EXIT"), { 84.f,19.f }))
+                {
+                    return 0;
+                }
+                ImGui::SetCursorPos({ 38.f,113.f });
+                ImGui::Text(VMProtectDecryptStringA("KEY:"));
+                ImGui::SetCursorPos({ 333.f,224.f });
+                ImGui::Text(VMProtectDecryptStringA("1.0"));
+
+                ImGui::End();
 
             }
-            ImGui::SetCursorPos({ 174.f,134.f });
-            if (ImGui::Button("EXIT", { 84.f,19.f }))
-            {
-                return 0;
-            }
-            ImGui::SetCursorPos({ 38.f,113.f });
-            ImGui::Text("KEY:");
-            ImGui::SetCursorPos({ 333.f,224.f });
-            ImGui::Text("1.0");
-
-
             if (por == true) {
 
-
-                ImGui::SetNextWindowSize({ 510.f,380.f });
-                ImGui::Begin("UnissexCheat");
+               
+                ImGui::SetNextWindowSize({ 510.f,430.f });
+                ImGui::Begin(VMProtectDecryptStringA("UnissexCheat"));
                 ImGui::SetCursorPos({ 10.f,30.f });
                 ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2(my_image_width, my_image_height));
 
                 //cs
                 ImGui::SetCursorPos({ 10.f,162.f });
-                if (ImGui::Button("LOG IN", { 151.f,20.f }))
+                if (ImGui::Button(VMProtectDecryptStringA("CS_GO"), { 151.f,20.f }))
                 {
 
 
@@ -259,33 +407,67 @@ int main(int, char**)
                 //apex
                 ImGui::SetCursorPos({ 10.f,210.f });
                 ImGui::Image((void*)(intptr_t)my_image_texture1, ImVec2(my_image_width1, my_image_height1));
-                ImGui::SetCursorPos({ 10.f,340.f });
-                if (ImGui::Button("LOG IN", { 151.f,20.f }))
+                ImGui::SetCursorPos({ 10.f,342.f });
+                if (ImGui::Button(VMProtectDecryptStringA("Apex_Legends"), { 151.f,20.f }))
                 {
 
 
 
                 }
-
 
                 //knives
                 ImGui::SetCursorPos({ 180.f,30.f });
                 ImGui::Image((void*)(intptr_t)my_image_texture2, ImVec2(my_image_width2, my_image_height2));
                 ImGui::SetCursorPos({ 179.f,162.f });
-                if (ImGui::Button("LOG IN", { 151.f,20.f }))
+                if (ImGui::Button(VMProtectDecryptStringA("Knives_Out"), { 151.f,20.f }))
                 {
 
 
 
                 }
 
+                //valorant
+                ImGui::SetCursorPos({ 350.f,30.f });
+                ImGui::Image((void*)(intptr_t)my_image_texture3, ImVec2(my_image_width3, my_image_height3));
+                ImGui::SetCursorPos({ 349.f,162.f });
+                if (ImGui::Button(VMProtectDecryptStringA("Valorant"), { 151.f,20.f }))
+                {
+
+
+
+                }
+                //exit
+                ImGui::SetCursorPos({ 5.f,380.f });
+                ImGui::Text(VMProtectDecryptStringA("________________________________________________________________________"));
+
+                ImGui::SetCursorPos({ 485.f,23.f });
+                if (ImGui::Button(VMProtectDecryptStringA("X"), { 20.f,20.f }))
+                {
+
+                    return 0;
+
+                }
+
+                ImGui::SetCursorPos({10.f,400.f });
+                if (ImGui::Button(VMProtectDecryptStringA("DISCORD"), { 80.f,20.f }))
+                {
+
+                  
+                  ShellExecute(0, 0, VMProtectDecryptStringA("https://discord.com/invite/j5ceX9GgSt"), 0, 0, SW_SHOW);
+
+                }
+                ImGui::SetCursorPos({ 100.f,400.f });
+                if (ImGui::Button(VMProtectDecryptStringA("FORUM"), { 80.f,20.f }))
+                {
+
+
+                    ShellExecute(0, 0, VMProtectDecryptStringA("https://dhjcheats.com/temp/forum/maintenance"), 0, 0, SW_SHOW);
+
+                }
 
                 ImGui::End();
 
             }
-
-
-            ImGui::End();
 
             
         }
@@ -311,6 +493,8 @@ int main(int, char**)
     glfwTerminate();
     
     return 0;
+
+    VMProtectEnd();
 }
 
 

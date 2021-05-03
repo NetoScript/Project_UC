@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="console.cpp" />
     <ClCompile Include="imgui_builder.h" />
     <ClCompile Include="include\imgui\imgui.cpp" />
     <ClCompile Include="include\imgui\imgui_demo.cpp" />
@@ -162,11 +163,13 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="console.h" />
     <ClInclude Include="HTTPRequest.hpp" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Helpers.h" />
     <ClInclude Include="include\MemMan\MemMan.h" />
     <ClInclude Include="stb_project.h" />
+    <ClInclude Include="VMProtectSDK.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

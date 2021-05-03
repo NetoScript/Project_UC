@@ -15,6 +15,9 @@
     <Filter Include="Arquivos de Cabeçalho\MenMan">
       <UniqueIdentifier>{49dd07be-b034-49a8-80de-2391950699ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\corconsole">
+      <UniqueIdentifier>{17dbdd85-14dd-42d4-8e31-2b00f97f68a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\imgui\imgui.cpp">
@@ -47,6 +50,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>Arquivos de Cabeçalho\corconsole</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\MemMan\MemMan.h">
@@ -63,6 +69,12 @@
     </ClInclude>
     <ClInclude Include="HTTPRequest.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="VMProtectSDK.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>Arquivos de Cabeçalho\corconsole</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

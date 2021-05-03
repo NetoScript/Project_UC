@@ -1,16 +1,29 @@
-﻿  main.cpp
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(248,88): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(248,72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(261,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(261,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(273,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(273,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+﻿  console.cpp
+  imgui_builder.h
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  MemMan.cpp
+  main.cpp
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(141,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(115,10): warning C4101: 'remVer': variável local não referenciada
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(396,88): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(396,72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(409,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(409,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(420,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(420,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(431,90): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Neto!\Documents\GitHub\Project_UC\projeto\main.cpp(431,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
   Gerando código
-  1 of 1783 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    23 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB not found, fall back to full compilation.
+  All 1789 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finalizada a geração de código
 glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' não foi encontrado 'glew32s.lib(glew.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\vc120.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
 glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' não foi encontrado 'glfw3.lib(context.obj)' ou no 'C:\Users\Neto!\Documents\GitHub\Project_UC\Release\glfw.pdb'; vinculando objeto quando quando sem nenhuma informação de depuração
